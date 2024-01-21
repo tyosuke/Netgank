@@ -49,7 +49,22 @@ def search():
         else:
             result_text = "\n".join([f"ID: {result['id']}, Text: {result['text']}" for result in search_results])
             return result_text
-    return "このページは検索フォームです。"
+    return """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>検索エンジン</title>
+    </head>
+    <body>
+        <h1>検索エンジン</h1>
+        <form method="POST">
+            <label for="query">検索キーワード:</label>
+            <input type="text" name="query" id="query" required>
+            <input type="submit" value="検索">
+        </form>
+    </body>
+    </html>
+    """
 
 if __name__ == "__main__":
     app.run(debug=True)
