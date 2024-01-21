@@ -1,4 +1,3 @@
 gunicorn==20.1.0
 Flask==2.1.1
-pip install Werkzeug==2.0.2
-pip install -r requirements.txt --upgrade
+Werkzeug==2.0.2
